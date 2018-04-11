@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+
+group = 'example'
+version = '0.0'
+
+description = """"""
+
+sourceCompatibility = 8
+targetCompatibility = 8
+
+dependencies{
+	compile group: 'org.orekit', name: 'orekit', version: '9.1'
+	testCompile 'junit:junit:4.12'
+}
+
+repositories{
+	mavenCentral()
+}
+
+sourceSets {
+	main {
+		java {
+			srcDir "src/main/java"
+		}
+	}
+}
